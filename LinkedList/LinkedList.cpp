@@ -11,7 +11,7 @@ using namespace std;
 struct Node {
 public:
 	template<typename... Ts>
-	using StringType = typename std::enable_if<std::conjunction<std::is_convertible<Ts, std::string>...>::value>::type;
+	using StringType = typename enable_if<conjunction<is_convertible<Ts, string>...>::value>::type;
 private:
 	Node* m_first;
 	static void CreateNextNode(Node* node) {
